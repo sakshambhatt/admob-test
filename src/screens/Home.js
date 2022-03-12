@@ -1,8 +1,9 @@
 import React, { useState, useEffect } from "react";
-import { TouchableOpacity, StyleSheet, Text, View } from "react-native";
+import { Image, StyleSheet, Text, TouchableOpacity, View } from "react-native";
 import { AdMobRewarded } from "expo-ads-admob";
 import { useUser } from "../contexts/UserContext";
 import { rewardedAdId } from "../configs/config";
+import icon from "../../assets/icon.png";
 
 export default function Home() {
   const { userName, userDispatch } = useUser();
@@ -26,6 +27,9 @@ export default function Home() {
   }, [toShowAd]);
   return (
     <View style={styles.container}>
+      <View>
+        <Image source={icon} style={{ width: 180, height: 180 }}></Image>
+      </View>
       <View>
         <Text numberOfLines={1} adjustsFontSizeToFit style={styles.heading}>
           admob-test

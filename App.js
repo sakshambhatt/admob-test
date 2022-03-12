@@ -1,3 +1,4 @@
+import React from "react";
 import RootComponent from "./src/components/RootComponent";
 import { UserProvider } from "./src/contexts/UserContext";
 
